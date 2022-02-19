@@ -2,11 +2,12 @@ import React from 'react';
 import './App.css';
 import axios from 'axios';
 import {useState, useEffect} from 'react';
-import GalleryItems from '../GalleryItems/GalleryItems';
+// import GalleryItems from '../GalleryItems/GalleryItems';
+import GalleryList from '../GalleryList/GalleryList';
 
 function App() {
   
-  const [getGalleryItems, setGalleryPics] = useState ([]);
+  const [galleryItems, setGalleryPics] = useState ([]);
 
   useEffect( () =>{
     getPics();
@@ -26,14 +27,13 @@ function App() {
         console.log('Error on get:', error);
       });
   }
-  console.log(getGalleryItems);
+  //console.log(getGalleryItems[0].id);
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        <GalleryList list = {galleryItems}/>
       </div>
     );
 

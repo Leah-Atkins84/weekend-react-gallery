@@ -21,21 +21,17 @@ function GalleryItems ({id, imgSrc, description, likes, putLikes}) {
            <div className = "gallery-items">
                {toggle ? (
                    <div className = "image-box">
-                       <img id={id} src={imgSrc} onClick={() => toggleItem()}/>
+                       <img id={id} src={imgSrc} alt={description} onClick={() => toggleItem()}/>
                     </div>):
                     (<div className="image-box" onClick={() => toggleItem()}>
                             <p>{description}</p>
                         </div>
                     )
                }
-               
-               </div> 
-            <div>
-                <img src={imgSrc} alt={description}></img>
-                <button onClick={handleClick}>Like</button>
-                <p> {likes} </p>
+                 <button onClick={handleClick}>Like</button>
+                        <p> {likes} </p>
 
-            </div>
+               </div> 
         
         </>
 

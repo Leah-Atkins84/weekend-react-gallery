@@ -1,5 +1,5 @@
 import { useState } from "react";
-//import "../GalleryItems/GalleryItems.css";
+import "../GalleryItems/GalleryItems.css";
 
 function GalleryItems ({id, imgSrc, description, likes, putLikes}) {
     console.log(id, imgSrc, description, likes);

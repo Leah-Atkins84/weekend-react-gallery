@@ -1,10 +1,16 @@
+/* .gallery-items{
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: flex-start, space-around;
+height: 100px;
+width: 100px;
+border: 1px solid;
+} */
 
-.gallery-items {
-    border: 1px solid;
-
+img{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
 }
 
-.image-box {
-    height: 100px;
-    width: 100px;
-}
+

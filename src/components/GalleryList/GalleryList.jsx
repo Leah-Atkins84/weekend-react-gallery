@@ -1,8 +1,10 @@
 import GalleryItems from "../GalleryItems/GalleryItems";
+import "../GalleryList/GalleryList.css";
 
 function GalleryList ({list, putLikes}) {
     return(
         <>
+        <div className = "gallery-list">
             {list.map(gallery =>
             <GalleryItems 
                 key = {gallery.id}
@@ -12,6 +14,7 @@ function GalleryList ({list, putLikes}) {
                 likes = {gallery.likes}
                 putLikes = {putLikes}/>
             )}
+        </div>
         </>
 
     )

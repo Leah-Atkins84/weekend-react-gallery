@@ -1,0 +1,10 @@
+.gallery-list{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center, space-between;
+    height: 100px;
+    width: 100px;
+    align-items: center;
+    
+  
+}

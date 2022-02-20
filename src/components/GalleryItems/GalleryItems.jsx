@@ -1,5 +1,11 @@
-function GalleryItems ({imgSrc, description, likes}) {
-    console.log(imgSrc, description, likes);
+function GalleryItems ({id, imgSrc, description, likes, putLikes}) {
+    console.log(id, imgSrc, description, likes);
+   
+    const handleClick = () =>{
+        console.log('liked!!!' );
+        putLikes(id);
+      }
+   
     return(
         <>
             {/* <p>Gallery goes here</p>
@@ -7,7 +13,7 @@ function GalleryItems ({imgSrc, description, likes}) {
             <img src={"images/goat_small.jpg"}/> */}
             <div>
                 <img src={imgSrc} alt={description}></img>
-                <button>Like</button>
+                <button onClick={handleClick}>Like</button>
                 <p> {likes} </p>
 
             </div>

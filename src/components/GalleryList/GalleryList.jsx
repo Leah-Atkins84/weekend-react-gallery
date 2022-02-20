@@ -1,14 +1,16 @@
 import GalleryItems from "../GalleryItems/GalleryItems";
 
-function GalleryList ({list}) {
+function GalleryList ({list, putLikes}) {
     return(
         <>
             {list.map(gallery =>
             <GalleryItems 
                 key = {gallery.id}
+                id = {gallery.id}
                 imgSrc = {gallery.path}
                 description = {gallery.description}
-                likes = {gallery.likes}/>
+                likes = {gallery.likes}
+                putLikes = {putLikes}/>
             )}
         </>
 

@@ -5,6 +5,7 @@ import {useState, useEffect} from 'react';
 // import GalleryItems from '../GalleryItems/GalleryItems';
 import GalleryList from '../GalleryList/GalleryList';
 
+
 function App() {
   
   const [galleryItems, setGalleryPics] = useState ([]);
@@ -27,13 +28,34 @@ function App() {
         console.log('Error on get:', error);
       });
   }
+  
+  const putLikes = (id) =>{
+    axios({
+      method: 'PUT',
+      url: `/gallery/like/${id}`
+    }).then( (response) =>{
+      console.log('Yay!', response);
+      getPics()
+    }).catch( (error) => {
+      console.log('Error in put!', error);
+    });
+
+  }
+
+
+ 
+
+
   //console.log(getGalleryItems[0].id);
     return (
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Gallery of My Life</h1>
         </header>
-        <GalleryList list = {galleryItems}/>
+        <GalleryList list = {galleryItems}
+        putLikes = {putLikes}
+        />
+       
       </div>
     );
 

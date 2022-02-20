@@ -1,6 +1,12 @@
+import { useState } from "react";
+
 function GalleryItems ({id, imgSrc, description, likes, putLikes}) {
     console.log(id, imgSrc, description, likes);
    
+    const [toggle, setToggle] = useState(true);
+    
+    const toggleItem = () => setToggle(!toggle);
+
     const handleClick = () =>{
         console.log('liked!!!' );
         putLikes(id);
@@ -8,9 +14,7 @@ function GalleryItems ({id, imgSrc, description, likes, putLikes}) {
    
     return(
         <>
-            {/* <p>Gallery goes here</p>
-
-            <img src={"images/goat_small.jpg"}/> */}
+            
             <div>
                 <img src={imgSrc} alt={description}></img>
                 <button onClick={handleClick}>Like</button>

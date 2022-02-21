@@ -41,12 +41,7 @@ function App() {
     });
 
   }
-
-
- 
-
-
-  //console.log(getGalleryItems[0].id);
+//  returns list gallery items
     return (
       <div className="App">
         <header className="App-header">

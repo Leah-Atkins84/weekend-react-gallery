@@ -9,7 +9,7 @@ import GalleryList from '../GalleryList/GalleryList';
 function App() {
   
   const [galleryItems, setGalleryPics] = useState ([]);
-
+  //on page load, display the gallery pics
   useEffect( () =>{
     getPics();
   }, []);
@@ -27,7 +27,7 @@ function App() {
       .catch(function (error) {
         console.log('Error on get:', error);
       });
-  }
+  }// end get
   
   const putLikes = (id) =>{
     axios({
@@ -40,8 +40,9 @@ function App() {
       console.log('Error in put!', error);
     });
 
-  }
-//  returns list gallery items
+  }// end put
+  
+  //  returns list gallery items
     return (
       <div className="App">
         <header className="App-header">
@@ -54,10 +55,6 @@ function App() {
       </div>
     );
 
-
-
-
-
-}
+}// end function app
 
 export default App;

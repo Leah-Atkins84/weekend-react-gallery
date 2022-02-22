@@ -8,6 +8,7 @@ function GalleryItems ({id, imgSrc, description, likes, putLikes}) {
 
     const handleClick = () =>{
         console.log('liked!!!' );
+        // changes like count when clicked
         putLikes(id);
       }
 
@@ -18,8 +19,9 @@ function GalleryItems ({id, imgSrc, description, likes, putLikes}) {
    
     return(
         <>
-           <div className = "gallery-items">
-               {toggle ? (
+           <div className = "gallery-items"> 
+                 {/* toggle the description when clicked */}
+               {toggle ? (    
                    <div className = "image-box">
                        <img id={id} src={imgSrc} alt={description} onClick={() => toggleItem()}/>
                     </div>):
@@ -27,7 +29,8 @@ function GalleryItems ({id, imgSrc, description, likes, putLikes}) {
                             <p>{description}</p>
                         </div>
                     )
-               }
+               }  
+                    {/*when clicked, = 'liked' */} 
                  <button onClick={handleClick}>Like</button>
                         <p> {likes} </p>
 
